@@ -168,3 +168,9 @@ This is a hackathon starter, not a production reference. Items that exist in
 - No `auth_nonces` reaper. Expired nonces accumulate.
 - `stellarService.accountExists` is exported but not consumed by any controller.
 - Friendbot funding is not implemented; users bring their own Stellar keys.
+
+## Soroban MVP artifact
+
+The minimal settlement registry is in [`contracts/payment-proof/`](contracts/payment-proof/).
+It is intentionally separate from the calendar, notification and Horizon
+verification services. Run `cargo test --manifest-path contracts/payment-proof/Cargo.toml`.
