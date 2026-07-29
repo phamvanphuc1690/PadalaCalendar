@@ -3,7 +3,27 @@
   "contractName": "remittance-payment-proof-contract",
   "sdkVersion": "27.0.2",
   "wasmPath": "contracts/payment-proof/target/wasm32v1-none/release/remittance_payment_proof_contract.wasm",
-  "wasmSha256": "8c9d7b15955b4008f3a84295e7a3974e659eedf060a3a7b26d26d316a2da2f60",
-  "status": "local-tested",
-  "testnet": { "status": "not-deployed", "contractId": null, "uploadTxHash": null, "deploymentTxHash": null, "initializeTxHash": null }
+  "wasmSha256": "69cbcb5afa568e10fa3a11547372f7f8a983af0ebf2bc0a768f095782f372637",
+  "status": "functional-mainnet",
+  "testnet": { "status": "not-deployed", "contractId": null, "uploadTxHash": null, "deploymentTxHash": null, "initializeTxHash": null },
+  "mainnet": {
+    "status": "functional",
+    "network": "public",
+    "contractId": "CDP7K67V3NABQ4OKSOQD7NICBUBEH472RD53DY2JQUI7TBJPX3MJXK5U",
+    "wasmSha256": "69cbcb5afa568e10fa3a11547372f7f8a983af0ebf2bc0a768f095782f372637",
+    "salt": "9eea7674d9775e6ec08583ed57d8b19f2e9427078f2b053f10acd808770131ec",
+    "sourceAccount": "GCUPLPBIZ7PXLRTMJOJ27ILHWDGCTCQ34763VYCSFDLO7DOIH7CLOB6P",
+    "uploadTxHash": "65283388514099d7b776078dd18d905c9ac0d4633794297716bdf30ac0275d11",
+    "deploymentTxHash": "1abf89ec17846544b12d557a2f7a43aa7869fe7c43ed61224923b8f0975700a8",
+    "initializeTxHash": "54cdca35fa6166aa0b2d7a3a470f8df81788f4781695f9ecdc9018640bb3054b",
+    "functionalTxHashes": [
+      "196cfff35b043d9b68a477a60cba9b4444637d0c28ca1faf21c68c7ca0ba9833",
+      "dc2c1a014e9312e2efec4c38881ba77d1d40e667e5b32011c97c6bb0371627b0"
+    ],
+    "functionalFlow": "initialize -> create_payment -> confirm_payment",
+    "paymentId": 36036,
+    "asset": "USDC",
+    "amount": "0.1",
+    "settlementEvent": "payment_settled"
+  }
 }

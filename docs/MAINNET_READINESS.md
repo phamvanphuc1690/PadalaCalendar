@@ -2,8 +2,8 @@
 
 Concept: scheduled remittance calendar with notifications and exact Horizon payment proof.
 
-Current evidence: the safe slice now rejects fake hashes, requires a successful Horizon transaction with exact recipient/USDC issuer/amount, and protects the route with auth, rate limiting, and idempotency. No funded mainnet transaction or deployment evidence has been supplied.
+Current evidence: the safe slice rejects fake hashes, requires a successful Horizon transaction with exact recipient/USDC issuer/amount, and protects the route with auth, rate limiting, and idempotency. The payment-proof Soroban contract is deployed and initialized on Stellar Public Mainnet, with a verified `create_payment` and `confirm_payment` flow.
 
-Required gates: configure public network and USDC issuer, build unsigned XDR for an external wallet, reconcile missed schedules/retries, and record real transaction links. The Base bridge watcher is fail-closed and does not sign with a server-held Stellar secret; an external signer/intent worker must complete bridge payouts.
+Required gates: reconcile missed schedules/retries and keep the external-wallet signing flow for real payouts. The Base bridge watcher is fail-closed and does not sign with a server-held Stellar secret; an external signer/intent worker must complete bridge payouts. The Mainnet contract evidence is recorded in `contracts/payment-proof/deployment.json`.
 
-Status: **chain-proof slice implemented; not mainnet-ready until network evidence and runtime tests exist**.
+Status: **functional Mainnet contract flow verified; the public app remains a hackathon demo and does not custody or sign user funds**.

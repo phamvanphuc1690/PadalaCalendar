@@ -8,6 +8,18 @@ PadalaCalendar is a lightweight hackathon demo for scheduled family remittances 
 
 The public preview automatically uses safe in-memory demo data when no database is configured. It does not sign transactions or move real funds.
 
+## Mainnet Soroban proof
+
+The payment-proof contract is deployed and initialized on Stellar Public Mainnet:
+
+- Contract: `CDP7K67V3NABQ4OKSOQD7NICBUBEH472RD53DY2JQUI7TBJPX3MJXK5U`
+- Verified flow: `initialize -> create_payment -> confirm_payment`
+- `create_payment`: [196cfff35b043d9b68a477a60cba9b4444637d0c28ca1faf21c68c7ca0ba9833](https://stellar.expert/explorer/public/tx/196cfff35b043d9b68a477a60cba9b4444637d0c28ca1faf21c68c7ca0ba9833)
+- `confirm_payment`: [dc2c1a014e9312e2efec4c38881ba77d1d40e667e5b32011c97c6bb0371627b0](https://stellar.expert/explorer/public/tx/dc2c1a014e9312e2efec4c38881ba77d1d40e667e5b32011c97c6bb0371627b0)
+
+The contract stores payment proofs and settlement references. It does not custody
+or transfer USDC; wallet signing remains external to the app.
+
 ## Prerequisites
 
 - Node.js 20+ and npm 10+
