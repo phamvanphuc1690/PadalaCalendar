@@ -20,6 +20,15 @@ The payment-proof contract is deployed and initialized on Stellar Public Mainnet
 The contract stores payment proofs and settlement references. It does not custody
 or transfer USDC; wallet signing remains external to the app.
 
+## Production documentation
+
+- [User guide](docs/USER_GUIDE.md)
+- [Contract API](docs/CONTRACT_API.md)
+- [Mainnet operations](docs/MAINNET_OPERATIONS.md)
+- [Transaction verification](docs/TRANSACTION_VERIFICATION.md)
+- [Incident response](docs/INCIDENT_RESPONSE.md)
+- [Release checklist](docs/RELEASE_CHECKLIST.md)
+
 ## Prerequisites
 
 - Node.js 20+ and npm 10+
